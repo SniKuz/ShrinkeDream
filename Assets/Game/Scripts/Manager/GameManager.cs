@@ -25,5 +25,5 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-
+    public SceneController SceneController;
 }
