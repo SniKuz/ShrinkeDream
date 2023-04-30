@@ -1,0 +1,19 @@
+{
+    "name": "MainRoomAssembly",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fcc62970bc5328943bea642410d36fc3",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:471b94c07bd2c4e4f9bd293bcc14163f",
+        "GUID:d170236e1fbc000448578c71afb0a2ee"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
