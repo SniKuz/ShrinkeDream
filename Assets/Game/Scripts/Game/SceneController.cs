@@ -11,7 +11,8 @@ public class SceneController : MonoBehaviour
         Title,
         Cut,
         MainRoom,
-        
+        LobbyScene
+
     }
 
     public SceneName sceneName;
