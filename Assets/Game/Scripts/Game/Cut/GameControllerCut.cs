@@ -19,6 +19,8 @@ namespace Game.Cut
         private bool isExcuting = true;
         private bool canInput = true;
 
+        private float waitTime = 0;
+
         private WaitForSeconds InputWait => new WaitForSeconds(inputWaitTime);
 
         private void Start()
@@ -37,23 +39,45 @@ namespace Game.Cut
         {
             while (isExcuting)
             {
+                waitTime += Time.deltaTime;
+
                 if (currentCutIndex >= cutObjects.Length)
+                {
+                    yield return new WaitForSeconds(fadeTime + 1.0f);
                     break;
+                }
+
+                if (waitTime > 1.0f)
+                {
+                    canInput = false;
+                    yield return WaitTimeNext(NextCut());
+                    waitTime -= waitTime;
+                    continue;
+                }
 
                 if (canInput)
-                    StartCoroutine(Input_Check());
+                    yield return Input_Check();
 
                 yield return null;
             }
 
             LoadScene();
         }
+
+        public IEnumerator WaitTimeNext(IEnumerator ie)
+        {
+            yield return InputWait;
+            yield return ie;
+        }
+
         public IEnumerator Input_Check()
         {
             canInput = false;
 
             if (Input.GetMouseButtonDown(0))
             {
+                waitTime -= waitTime;
+
                 yield return NextCut();
                 yield return InputWait;
             }

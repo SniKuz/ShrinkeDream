@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using Transition;
+using Game;
 
 namespace Game.MainRoom
 {
@@ -29,7 +30,7 @@ namespace Game.MainRoom
         [SerializeField]
         private float _originMemoY;
         [SerializeField]
-        private int curruntDay;
+        private int curruntDay = 0;
 
         private void Awake()
         {
@@ -53,6 +54,11 @@ namespace Game.MainRoom
 
             _originMemoY = _memoObject.transform.localPosition.y;
             _iemBuffer.Enqueue(AnimMoveUp(_memoObject, 0, ShowDuration));
+
+            if (curruntDay < GameManager.Instance.CurruntDay)
+            {
+                NextDay();
+            }
         }
 
         public void Close()
