@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
-        mouseInput.Enable();    
+        mouseInput.Enable();
     }
 
     private void OnDisable()
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         if (Vector3.Distance(transform.position, destination) > 0.1f)
-        transform.position = Vector3.MoveTowards(transform.position, destination, movementSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, destination, movementSpeed * Time.deltaTime);
 
 
         //if (Vector3.Distance(transform.position, destination) > 0.1f)
