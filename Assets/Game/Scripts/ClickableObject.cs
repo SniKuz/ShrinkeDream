@@ -24,7 +24,7 @@ public class ClickableObject : MonoBehaviour
                 GameObject hitObject = hit.collider.gameObject;
 
                 // 오브젝트와 상호작용하는 로직을 작성합니다.
-                Debug.Log("Clicked object: " + hitObject.name);
+                //Debug.Log("Clicked object: " + hitObject.name);
             }
         }
     }

@@ -1,0 +1,39 @@
+[33mb5d5cd5[m[33m ([m[1;36mHEAD -> [m[1;32mtitle[m[33m)[m HEAD@{0}: reset: moving to HEAD
+[33mb5d5cd5[m[33m ([m[1;36mHEAD -> [m[1;32mtitle[m[33m)[m HEAD@{1}: rebase (continue): pull
+[33mf0927ba[m HEAD@{2}: checkout: moving from main to title
+[33m5c03da6[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{3}: pull: Fast-forward
+[33m410590a[m HEAD@{4}: checkout: moving from title to main
+[33mf0927ba[m HEAD@{5}: commit: add Sprite
+[33m681e7dd[m[33m ([m[1;31morigin/title[m[33m)[m HEAD@{6}: commit: Add custom 2D Lit
+[33m410590a[m HEAD@{7}: merge main: Fast-forward
+[33mcb47e65[m HEAD@{8}: checkout: moving from main to title
+[33m410590a[m HEAD@{9}: merge title: Fast-forward
+[33m6e5f217[m HEAD@{10}: checkout: moving from title to main
+[33m410590a[m HEAD@{11}: checkout: moving from main to title
+[33m6e5f217[m HEAD@{12}: checkout: moving from 0bc50a286dacbf9fcb5f0e9e5dedacbe0e3d0f2f to main
+[33m0bc50a2[m HEAD@{13}: rebase (continue): 몰루
+[33mcb47e65[m HEAD@{14}: rebase (start): checkout origin/title
+[33m410590a[m HEAD@{15}: checkout: moving from main to title
+[33m6e5f217[m HEAD@{16}: checkout: moving from title to main
+[33m410590a[m HEAD@{17}: commit (merge): Merge branch 'main' into title
+[33mdf4b8b6[m HEAD@{18}: checkout: moving from main to title
+[33m6e5f217[m HEAD@{19}: commit: pull
+[33m5ed15a0[m HEAD@{20}: pull: Fast-forward
+[33m7416d0d[m[33m ([m[1;31morigin/lobby[m[33m, [m[1;32mlobby[m[33m)[m HEAD@{21}: checkout: moving from title to main
+[33mdf4b8b6[m HEAD@{22}: commit: 몰루
+[33md03e041[m HEAD@{23}: checkout: moving from title to title
+[33md03e041[m HEAD@{24}: commit (merge): Merge Update
+[33mda3d5be[m HEAD@{25}: checkout: moving from main to title
+[33m7416d0d[m[33m ([m[1;31morigin/lobby[m[33m, [m[1;32mlobby[m[33m)[m HEAD@{26}: merge lobby: Fast-forward
+[33m64253f7[m HEAD@{27}: checkout: moving from lobby to main
+[33m7416d0d[m[33m ([m[1;31morigin/lobby[m[33m, [m[1;32mlobby[m[33m)[m HEAD@{28}: checkout: moving from main to lobby
+[33m64253f7[m HEAD@{29}: checkout: moving from lobby to main
+[33m64253f7[m HEAD@{30}: checkout: moving from main to lobby
+[33m64253f7[m HEAD@{31}: checkout: moving from lobby to main
+[33mda3d5be[m HEAD@{32}: checkout: moving from title to lobby
+[33mda3d5be[m HEAD@{33}: commit: 기본베이스 기능 추가
+[33m80ccc0f[m HEAD@{34}: commit: [FEAT] LogoScene
+[33m64253f7[m HEAD@{35}: checkout: moving from main to title
+[33m64253f7[m HEAD@{36}: commit: Add GameManager
+[33mbe2e5af[m HEAD@{37}: commit: Re Create Project in URP
+[33mf7b06e3[m HEAD@{38}: clone: from https://github.com/SniKuz/ShrinkeDream.git

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.EventSystems;
 
 //new inputsystem을 사용하여 구현
 //코드 문제 플레이어 rigidbody가 다이내믹이 아닌 경우 떨림과 장애물 막힘 발생
@@ -9,11 +10,17 @@ using UnityEngine.Tilemaps;
 
 public class PlayerController : MonoBehaviour
 {
+    public Animator Animator;
+    [Header("Tile")]
     public Tilemap map;
     [SerializeField] private float movementSpeed;
     MouseInput mouseInput;
 
+    private Camera mainCamera;
+
     private Vector3 destination;
+    private bool isMove = false;
+
     private void Awake()
     {
         mouseInput = new MouseInput();
@@ -32,26 +39,57 @@ public class PlayerController : MonoBehaviour
     {
         destination = transform.position;
         mouseInput.Mouse.MouseClick.performed += _ => MouseClick();
-
+        mainCamera = Camera.main;
     }
 
     private void MouseClick()
     {
-        Vector2 mousePosition = mouseInput.Mouse.MousePosition.ReadValue<Vector2>();
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        Vector3Int gridPosition = map.WorldToCell(mousePosition);
-        if (map.HasTile(gridPosition))
+        // UI 위에 있으면 종료 (문제, 다른 스프라이트 오브젝트까지 차단)
+        //if (EventSystem.current.IsPointerOverGameObject()) return;
+
+        if (Input.GetMouseButtonDown(0))
         {
-            destination = map.GetCellCenterWorld(gridPosition);
-            //destination = mousePosition;
+            Vector2 mp = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mp, Vector2.zero);
+
+            if (hit)
+            {
+                GameObject hitObject = hit.collider.gameObject;
+
+                // 오브젝트와 상호작용하는 로직을 작성합니다.
+                Debug.Log("Clicked object: " + hitObject.name);
+
+                if (hit.transform.CompareTag("Trigger"))
+                {
+                    isMove = true;
+                } else
+                {
+                    isMove = false;
+                }
+            } else
+            {
+                isMove = true;
+            }
+        }
+
+        if (isMove) {
+            Vector2 mousePosition = mouseInput.Mouse.MousePosition.ReadValue<Vector2>();
+            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            Vector3Int gridPosition = map.WorldToCell(mousePosition);
+            if (map.HasTile(gridPosition))
+            {
+                destination = map.GetCellCenterWorld(gridPosition);
+                //destination = mousePosition;
+            } 
         }
     }
 
     void FixedUpdate()
     {
-        if (Vector3.Distance(transform.position, destination) > 0.1f)
+        float distance = Vector3.Distance(transform.position, destination);
+        Animator.SetFloat("distance", distance);
+        if (distance > 0.1f)
             transform.position = Vector3.MoveTowards(transform.position, destination, movementSpeed * Time.deltaTime);
-
 
         //if (Vector3.Distance(transform.position, destination) > 0.1f)
         //{

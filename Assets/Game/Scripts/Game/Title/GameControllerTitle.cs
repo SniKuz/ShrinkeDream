@@ -11,17 +11,23 @@ namespace Game.Title
         [Header("Prevate Reference")]
         [SerializeField]
         ZoomEffect zoomEffect;
+        public AudioClip[] clips;
+        public AudioSource SFX_Audio;
         [Header("Private Setting")]
         private bool isEnd;
 
         private void Start()
         {
+            GameManager.Instance.BGM_Audio.clip = clips[0];
+            GameManager.Instance.BGM_Audio.Play();
             zoomEffect.SetEffect();
+            SFX_Audio.clip = clips[1];
         }
 
         #region StartButton
         public void ExcuteStartButton()
         {
+            SFX_Audio.Play();
             StartCoroutine(ExcuteStart());
         }
 

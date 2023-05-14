@@ -30,6 +30,7 @@ namespace Game
 
         public SceneController SceneController;
         public GameObject[] Controllers;
+        public AudioSource BGM_Audio;
         [Header("Day")]
         public int CurruntDay = 0;
 
