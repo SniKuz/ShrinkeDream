@@ -8,6 +8,7 @@ using Transition;
 public class DialogueController : MonoBehaviour
 {
     [Header("Metadata")]
+    public GameObject RayBlocker;
     [SerializeField]
     TextMeshProUGUI _dialogueText;
     [SerializeField]
@@ -30,11 +31,6 @@ public class DialogueController : MonoBehaviour
     private Dictionary<string, DialogueText> _dialogueDic = new();
     public List<Button> sebuttons = new();
 
-    private void Start()
-    {
-        Init(); 
-    }
-
     #region Base
     public void Init()
     {
@@ -44,6 +40,7 @@ public class DialogueController : MonoBehaviour
         }
 
         _nextButton.interactable = true;
+        RayBlocker.SetActive(false);
         gameObject.SetActive(false);
     }
 
@@ -51,11 +48,13 @@ public class DialogueController : MonoBehaviour
     {
         Init();
         NextDialogueText();
+        RayBlocker.SetActive(true);
         gameObject.SetActive(true);
     }
 
     public void Close()
     {
+        RayBlocker.SetActive(false);
         gameObject.SetActive(false);
     }
     #endregion

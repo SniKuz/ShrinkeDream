@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Controller
   - Wall
+  - MoveTile
+  - Trigger
   layers:
   - Default
   - TransparentFX

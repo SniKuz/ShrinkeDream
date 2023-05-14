@@ -13,6 +13,7 @@ namespace Game.MainRoom
         [Header("Metadata")]
         [SerializeField]
         GameObject _memoObject;
+        public GameObject RayBlocker;
         [SerializeField]
         Button _showButton;
 
@@ -41,13 +42,14 @@ namespace Game.MainRoom
                 tObj.transform.gameObject.SetActive(false);
                 tObj.TypeDelay = TypeDelay;
             }
+            RayBlocker.SetActive(false);
         }
 
         #region Ã¢ º¸±â
         public void Show()
         {
             if (isShow) return;
-
+            RayBlocker.SetActive(true);
             _showButton.interactable = false;
             _iemBuffer = new Queue<IEnumerator>();
             _coroutine = StartCoroutine(AnimationProcess());
@@ -64,7 +66,7 @@ namespace Game.MainRoom
         public void Close()
         {
             if (!isShow) return;
-
+            RayBlocker.SetActive(false);
             _showButton.interactable = false;
             _iemBuffer.Enqueue(AnimMoveUp(_memoObject, _originMemoY, ShowDuration));
             _iemBuffer.Enqueue(StopCoroutine());
