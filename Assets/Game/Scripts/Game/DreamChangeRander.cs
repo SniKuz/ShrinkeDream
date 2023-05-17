@@ -16,7 +16,6 @@ namespace Game
         [Header("Option")]
         public float FadeTime = 1.0f;
         public bool isFadeIn = true;
-        private float value = 2.0f;
 
         private void Start()
         {

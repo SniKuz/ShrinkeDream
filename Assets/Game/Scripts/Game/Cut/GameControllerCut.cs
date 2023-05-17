@@ -10,10 +10,12 @@ namespace Game.Cut
     {
         [Header("Prevate Reference")]
         [SerializeField]
-        GameObject[] cutObjects;
+        CutContainer[] CutContainer;
+        [SerializeField] List<GameObject[]> ListCut;
         [Header("Private Setting")]
         public float inputWaitTime;
         public float fadeTime;
+        public int currentContainer;
         [SerializeField]
         private int currentCutIndex = 0;
         private bool isExcuting = true;
@@ -25,7 +27,8 @@ namespace Game.Cut
 
         private void Start()
         {
-            foreach (GameObject obj in cutObjects)
+            currentContainer = GameManager.Instance.CurruntDay;
+            foreach (GameObject obj in CutContainer[currentContainer].cutObjects)
             {
                 obj.TryGetComponent(out Image img);
                 img.color = new Color(img.color.r, img.color.g, img.color.b, 0);
@@ -41,7 +44,7 @@ namespace Game.Cut
             {
                 waitTime += Time.deltaTime;
 
-                if (currentCutIndex >= cutObjects.Length)
+                if (currentCutIndex >= CutContainer[currentContainer].cutObjects.Length)
                 {
                     yield return new WaitForSeconds(fadeTime + 1.0f);
                     break;
@@ -88,7 +91,7 @@ namespace Game.Cut
         private IEnumerator NextCut()
         {
             Sequence sequence = DOTween.Sequence();
-            cutObjects[currentCutIndex].TryGetComponent(out Image tempCutImage);
+            CutContainer[currentContainer].cutObjects[currentCutIndex].TryGetComponent(out Image tempCutImage);
             sequence.Append(tempCutImage.DOFade(1, fadeTime))
                 .Play();
 
