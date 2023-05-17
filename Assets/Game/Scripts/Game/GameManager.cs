@@ -31,6 +31,8 @@ namespace Game
         public SceneController SceneController;
         public GameObject[] Controllers;
         public AudioSource BGM_Audio;
+        [Header("Charater")]
+        public string CurrentCharacter = "Miller";
         [Header("Day")]
         public int CurruntDay = 0;
         [SerializeField]
@@ -48,18 +50,6 @@ namespace Game
             }
         }
 
-
-        private void OnEnable()
-        {
-            Controllers = GameObject.FindGameObjectsWithTag("Controller");
-            foreach (GameObject ct in Controllers)
-            {
-                ct.TryGetComponent(out SceneController);
-
-                if (SceneController != null)
-                    break;
-            }
-        }
 
         public void EXITGAME()
         {

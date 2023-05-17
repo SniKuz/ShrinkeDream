@@ -10,6 +10,7 @@ namespace Game.MainRoom
 {
     public class RoomContorller : MonoBehaviour
     {
+        public SceneController SceneController;
         [Header("Audio")]
         public AudioClip[] clips;
         [Header("Reference")]
@@ -42,7 +43,7 @@ namespace Game.MainRoom
         IEnumerator IEDreamChange()
         {
             yield return new WaitForSeconds(dreamTime);
-            //Itemcount¿Í currentday¸¦ ¹Ş¾Æ¼­ Dream Ãß°İ / ÆÛÁñ ³ª´²¼­ ³Ñ¾î°¡´Â ±â´ÉÀ¸·Î ±¸Çö¿¹Á¤
+            //Itemcountì™€ currentdayë¥¼ ë°›ì•„ì„œ Dream ì¶”ê²© / í¼ì¦ ë‚˜ëˆ ì„œ ë„˜ì–´ê°€ëŠ” ê¸°ëŠ¥ìœ¼ë¡œ êµ¬í˜„ì˜ˆì •
             GameManager.Instance.SceneController.LoadScene("Dream");
         }
     }
