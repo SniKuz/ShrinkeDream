@@ -3489,6 +3489,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2cebe5ef59f447d4d803665e3ecf1a2f, type: 3}
   MemoContorller: {fileID: 1878979189}
   DialogueController: {fileID: 2084370524}
+  ChapterUI: {fileID: 636380458}
   DreamChangePrefab: {fileID: 3154191320932243617, guid: ec8f311ece125ce40946e1b6d77090b8, type: 3}
 --- !u!4 &997648588
 Transform:
