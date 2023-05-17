@@ -43,7 +43,9 @@ namespace Game.MainRoom
         IEnumerator IEDreamChange()
         {
             yield return new WaitForSeconds(dreamTime);
-            SceneController.LoadScene("Dream");
+
+            //Itemcount와 currentday를 받아서 Dream 추격 / 퍼즐 나눠서 넘어가는 기능으로 구현예정
+            GameManager.Instance.SceneController.LoadScene("Dream");
         }
     }
 }
