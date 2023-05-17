@@ -364,6 +364,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 3
   Path_Scene: Game/Scenes/
+  ActiveCount: 1
+  previousScene: 0
 --- !u!4 &766770504
 Transform:
   m_ObjectHideFlags: 0
@@ -392,13 +394,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneController: {fileID: 766770503}
-  cutObjects:
-  - {fileID: 220586630}
-  - {fileID: 1891052768}
-  - {fileID: 218721469}
-  - {fileID: 1394910311}
-  inputWaitTime: 0.5
-  fadeTime: 2
+  CutContainer:
+  - {fileID: 2069129437}
+  inputWaitTime: 0.2
+  fadeTime: 1
+  currentCut: 0
   currentCutIndex: 0
 --- !u!1 &876756344
 GameObject:
@@ -633,7 +633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1582588657}
   - component: {fileID: 1582588656}
-  - component: {fileID: 1582588655}
+  - component: {fileID: 1582588658}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -641,26 +641,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1582588655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1582588654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &1582588656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,6 +671,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1582588658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582588654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1 &1727549559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,6 +1030,7 @@ GameObject:
   - component: {fileID: 2069129434}
   - component: {fileID: 2069129436}
   - component: {fileID: 2069129435}
+  - component: {fileID: 2069129437}
   m_Layer: 5
   m_Name: SceneBox
   m_TagString: Untagged
@@ -1086,3 +1097,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069129433}
   m_CullTransparentMesh: 1
+--- !u!114 &2069129437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069129433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0786b62714fd1bd4cbfcd24257701056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutObjects:
+  - {fileID: 220586630}
+  - {fileID: 1891052768}
+  - {fileID: 218721469}
+  - {fileID: 1394910311}
