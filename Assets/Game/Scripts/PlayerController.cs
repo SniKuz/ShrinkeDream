@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 destination;
     private bool isMove = false;
 
+
+
     private void Awake()
     {
         mouseInput = new MouseInput();
