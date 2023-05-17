@@ -93,6 +93,17 @@ public class PlayerController : MonoBehaviour
         if (distance > 0.1f)
             transform.position = Vector3.MoveTowards(transform.position, destination, movementSpeed * Time.deltaTime);
 
+        if (destination.x > transform.position.x)
+        {
+            // 현재 스프라이트의 스케일에서 x축만 반전
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else if (destination.x < transform.position.x)
+        {
+            // 현재 스프라이트의 스케일을 그대로 유지
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+
         //if (Vector3.Distance(transform.position, destination) > 0.1f)
         //{
         //    Vector3 currentPosition = transform.position;
