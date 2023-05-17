@@ -23,7 +23,7 @@ public class DreamEvent : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //GameManager.Instance.ItemCount++;
-        if (collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player")
         {
             btn.SetActive(true);
         }

@@ -16,8 +16,6 @@ public class MonsterAI : MonoBehaviour
     public Transform target;
     private Vector3 destination;
     private SpriteRenderer spriteRenderer;
-    public float mainTime = 2f;
-    public GameObject MainPrefab;
 
     private void Start()
     {
@@ -50,30 +48,9 @@ public class MonsterAI : MonoBehaviour
             System.Console.WriteLine("충돌");
             //지금까지 먹은 아이템 초기화
             GameManager.Instance.ItemCount = 100;
-
             //mainroom씬으로 사출
-            //GameManager.Instance.SceneController.LoadScene(3);
-
-            MainChange();
+            GameManager.Instance.SceneController.LoadScene(3);
         }
-    }
-
-
-    public void MainChange()
-    {
-        if (MainPrefab == null) return;
-
-        Instantiate(MainPrefab);
-        mainTime = 2f;
-        StartCoroutine(IEMainChange());
-    }
-
-    IEnumerator IEMainChange()
-    {
-        yield return new WaitForSeconds(mainTime);
-        GameManager.Instance.SceneController.LoadScene("MainRoom");
-
-        //itemcount가 일정 개수 이상이면 MainRoom에 텍스트 추가
     }
 
 }
