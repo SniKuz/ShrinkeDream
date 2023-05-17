@@ -920,6 +920,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 331017537219347397, guid: ee15bba18a722714e84fd7e8aafc55d7, type: 3}
+      propertyPath: ActiveCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8966476009948884105, guid: ee15bba18a722714e84fd7e8aafc55d7, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -930,7 +934,7 @@ PrefabInstance:
       objectReference: {fileID: 368777413}
     - target: {fileID: 8966476009948884106, guid: ee15bba18a722714e84fd7e8aafc55d7, type: 3}
       propertyPath: CurruntDay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8966476009948884107, guid: ee15bba18a722714e84fd7e8aafc55d7, type: 3}
       propertyPath: m_RootOrder
@@ -3480,10 +3484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627389ccc52cea346b480340effce339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   SceneController: {fileID: 997648589}
-=======
->>>>>>> parent of 10a9b86 (flip, dream씬 몬스터와 충돌시 사출)
   clips:
   - {fileID: 8300000, guid: 2cebe5ef59f447d4d803665e3ecf1a2f, type: 3}
   MemoContorller: {fileID: 1878979189}
@@ -3518,11 +3519,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 0
   Path_Scene: Game/Scenes/
-<<<<<<< HEAD
   ActiveCount: 1
   previousScene: 0
-=======
->>>>>>> parent of 10a9b86 (flip, dream씬 몬스터와 충돌시 사출)
 --- !u!1 &1002956010
 GameObject:
   m_ObjectHideFlags: 0
