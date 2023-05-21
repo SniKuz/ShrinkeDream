@@ -35,20 +35,10 @@ namespace Game
         public string CurrentCharacter = "Miller";
         [Header("Day")]
         public int CurruntDay = 0;
-        [SerializeField]
-        private int itemCount = 0;
 
-        public int ItemCount //일정 itemcount가 되면 꿈신을 변경
-        {
-            get
-            {
-                return itemCount; 
-            }
-            set
-            {
-                itemCount = value;
-            }
-        }
+        [SerializeField]
+        public int ItemCount; //일정 itemcount가 되면 꿈신을 변경
+
 
 
         private void OnEnable()

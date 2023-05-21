@@ -43,7 +43,13 @@ namespace Game.MainRoom
         {
             yield return new WaitForSeconds(dreamTime);
             //Itemcount와 currentday를 받아서 Dream 추격 / 퍼즐 나눠서 넘어가는 기능으로 구현예정
-            GameManager.Instance.SceneController.LoadScene("Dream");
+            if (GameManager.Instance.ItemCount < 2) { 
+                GameManager.Instance.SceneController.LoadScene("Dream");
+            }
+            else if (GameManager.Instance.ItemCount >= 2)
+            {
+                GameManager.Instance.SceneController.LoadScene("Dream2");
+            }
         }
     }
 }

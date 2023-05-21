@@ -49,7 +49,7 @@ public class MonsterAI : MonoBehaviour
         {
             System.Console.WriteLine("충돌");
             //지금까지 먹은 아이템 초기화
-            GameManager.Instance.ItemCount = 100;
+            GameManager.Instance.ItemCount = 0;
 
             //mainroom씬으로 사출
             //GameManager.Instance.SceneController.LoadScene(3);
@@ -72,8 +72,6 @@ public class MonsterAI : MonoBehaviour
     {
         yield return new WaitForSeconds(mainTime);
         GameManager.Instance.SceneController.LoadScene("MainRoom");
-
-        //itemcount가 일정 개수 이상이면 MainRoom에 텍스트 추가
     }
 
 }
