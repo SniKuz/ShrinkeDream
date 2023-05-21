@@ -7,7 +7,6 @@ namespace Game.Trigger
     public class TriggerBubble : MonoBehaviour
     {
         public GameObject Bubble;
-        public bool bubbleVisible = false;
 
         private void Start()
         {
@@ -21,7 +20,7 @@ namespace Game.Trigger
 
         private void Init()
         {
-            Bubble.SetActive(bubbleVisible);
+            Bubble.SetActive(false);
         }
 
         private void OnTriggerEnter2D(Collider2D collision)

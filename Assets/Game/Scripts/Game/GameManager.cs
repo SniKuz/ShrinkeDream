@@ -51,6 +51,18 @@ namespace Game
         }
 
 
+        private void OnEnable()
+        {
+            Controllers = GameObject.FindGameObjectsWithTag("Controller");
+            foreach (GameObject ct in Controllers)
+            {
+                ct.TryGetComponent(out SceneController);
+
+                if (SceneController != null)
+                    break;
+            }
+        }
+
         public void EXITGAME()
         {
 #if UNITY_EDITOR

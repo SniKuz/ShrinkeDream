@@ -21,7 +21,7 @@ public class SceneController : MonoBehaviour
 
     public int ActiveCount = 1;
     public int previousScene;
-    
+
     /* Scene Load */
     /// <summary>
     /// 씬 불러오기, SceneController 클래스의 SceneName에 올바른 Scene 이름을 넣으세요.
@@ -29,38 +29,21 @@ public class SceneController : MonoBehaviour
     /// <param name="scene"></param>
     public void LoadScene(SceneName scene)
     {
-        previousScene = SceneManager.GetActiveScene().buildIndex;
-        if (ActiveCount > 1)
-            UnloadScene();
-        else
-            SceneManager.LoadScene(Path_Scene + scene.ToString());
+        SceneManager.LoadScene(Path_Scene + scene.ToString());
     }
     public void LoadScene(string scene)
     {
-        previousScene = SceneManager.GetActiveScene().buildIndex;
-        if (ActiveCount > 1)
-            UnloadScene();
-        else
-            SceneManager.LoadScene(Path_Scene + scene);
+        SceneManager.LoadScene(Path_Scene + scene);
     }
     public void LoadScene(int scene)
     {
-        previousScene = SceneManager.GetActiveScene().buildIndex;
-        if (ActiveCount > 1)
-            UnloadScene();
-        else
-            SceneManager.LoadScene(scene);
+        SceneManager.LoadScene(scene);
     }
     public void LoadScene()
     {
-        previousScene = SceneManager.GetActiveScene().buildIndex;
-        if (ActiveCount > 1)
-            UnloadScene();
-        else
-            SceneManager.LoadScene(Path_Scene + sceneName.ToString());
+        SceneManager.LoadScene(Path_Scene + sceneName.ToString());
     }
 
-    /* Scene Additve */
     public void AdditveScene(int scene)
     {
         SceneManager.LoadScene(scene, LoadSceneMode.Additive);
