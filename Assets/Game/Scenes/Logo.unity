@@ -339,7 +339,6 @@ GameObject:
   m_Component:
   - component: {fileID: 317399343}
   - component: {fileID: 317399342}
-  - component: {fileID: 317399344}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -359,7 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb7c2651ebd5b8046920142ddfd882b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneController: {fileID: 317399344}
+  sceneName: 1
   logoTransition: {fileID: 22432545}
   fadeTime: 2
 --- !u!4 &317399343
@@ -377,22 +376,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &317399344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 317399341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 761c62218ebc0464fbcd5a151933820c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: 1
-  Path_Scene: Game/Scenes/
-  ActiveCount: 1
-  previousScene: 0
 --- !u!1 &878601138
 GameObject:
   m_ObjectHideFlags: 0

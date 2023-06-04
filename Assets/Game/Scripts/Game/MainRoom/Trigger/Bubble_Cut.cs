@@ -13,6 +13,7 @@ namespace Game.MainRoom.Trigger
         {
             base.OnPointerClick(eventData);
             GameManager.Instance.SceneController.AdditveScene(2);
+            TriggerBubble.isEndEvent = false;
         }
     }
 }

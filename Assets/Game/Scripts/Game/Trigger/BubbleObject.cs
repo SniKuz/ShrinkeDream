@@ -7,18 +7,24 @@ namespace Game.Trigger
 {
     public class BubbleObject : MonoBehaviour, IPointerClickHandler
     {
+        [HideInInspector]public TriggerBubble TriggerBubble;
+
         public AudioSource AudioSource;
         public float RemoveTime = 0.5f;
 
-        virtual public void OnPointerClick(PointerEventData eventData)
+        public void SetActive(bool isActive)
         {
-            AudioSource.Play();
-            Invoke("Hide", RemoveTime);
+            gameObject.SetActive(isActive);
         }
-
         private void Hide()
         {
             gameObject.SetActive(false);
+        }
+
+        public virtual void OnPointerClick(PointerEventData eventData)
+        {
+            AudioSource.Play();
+            Invoke("Hide", RemoveTime);
         }
     }
 }

@@ -15,11 +15,24 @@ namespace Game.MainRoom
         [Header("Setting")]
         public float transitionTime = 1.0f;
 
+        private static int dayIsRepeat = 0;
+
         private void OnEnable()
         {
-            m_TitleText.text = GameManager.Instance.CurrentCharacter;
-            m_DayText.text = (GameManager.Instance.CurruntDay+1).ToString();
-            StartCoroutine(Excute());
+            if (dayIsRepeat != GameManager.Instance.CurruntDay + 1) 
+            {
+                dayIsRepeat = GameManager.Instance.CurruntDay + 1;
+                m_TitleText.text = GameManager.Instance.CurrentCharacter;
+                m_DayText.text = dayIsRepeat.ToString();
+
+                StartCoroutine(Excute());
+            }
+            else
+            {
+                gameObject.SetActive(false);
+            }
+
+            
         }
 
         IEnumerator Excute()

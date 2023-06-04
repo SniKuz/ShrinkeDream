@@ -15,6 +15,7 @@ namespace Game.MainRoom.Trigger
         {
             Popup.SetActive(true);
             base.OnPointerClick(eventData);
+            TriggerBubble.isEndEvent = false;
         }
     }
 }

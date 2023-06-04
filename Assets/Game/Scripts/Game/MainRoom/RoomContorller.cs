@@ -14,20 +14,22 @@ namespace Game.MainRoom
         public AudioClip[] clips;
         [Header("Reference")]
         public MemoContorller MemoContorller;
-        public DialogueController DialogueController;
         [Header("Render")]
         public GameObject DreamChangePrefab;
         private float dreamTime = 1.0f;
+        [Header("DayProgress")]
+        public GameObject[] dayProgress;
 
         private void Start()
         {
             GameManager.Instance.BGM_Audio.clip = clips[0];
             GameManager.Instance.BGM_Audio.Play();
-        }
-
-        public void ShowDialogue()
-        {
-            DialogueController.Show();
+            if (dayProgress.Length > 0 && dayProgress.Length > GameManager.Instance.CurruntDay)
+            {
+                DayProgress progress = dayProgress[GameManager.Instance.CurruntDay].GetComponent<DayProgress>();
+                progress.gameObject.SetActive(true);
+                progress.Run();
+            }
         }
 
         public void DreamChange()
@@ -37,6 +39,14 @@ namespace Game.MainRoom
             Instantiate(DreamChangePrefab);
             dreamTime = DreamChangePrefab.GetComponent<DreamChangeRander>().FadeTime;
             StartCoroutine(IEDreamChange());
+        }
+        public void DreamChange(string sceneName)
+        {
+            if (DreamChangePrefab == null) return;
+
+            Instantiate(DreamChangePrefab);
+            dreamTime = DreamChangePrefab.GetComponent<DreamChangeRander>().FadeTime;
+            StartCoroutine(IEDreamChange(sceneName));
         }
 
         IEnumerator IEDreamChange()
@@ -50,6 +60,13 @@ namespace Game.MainRoom
             {
                 GameManager.Instance.SceneController.LoadScene("Dream2");
             }
+        }
+
+        IEnumerator IEDreamChange(string sceneName)
+        {
+            yield return new WaitForSeconds(dreamTime);
+            //Itemcount와 currentday를 받아서 Dream 추격 / 퍼즐 나눠서 넘어가는 기능으로 구현예정
+            GameManager.Instance.SceneController.LoadScene(sceneName);
         }
     }
 }

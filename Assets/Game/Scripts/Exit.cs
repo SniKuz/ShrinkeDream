@@ -19,7 +19,8 @@ public class Exit : MonoBehaviour
             {
                 if (GameManager.Instance.ItemCount >= 2)
                 {
-                    GameManager.Instance.CurruntDay++;
+                    GameManager.Instance.CanDreamComplete = true;
+                    //GameManager.Instance.CurruntDay++;
                     GameManager.Instance.ItemCount = 0;
                     MainChange();
                 }
