@@ -31,8 +31,9 @@ public class Exit : MonoBehaviour
                 if (GameManager.Instance.ItemCount >= 2)
                 {
                     player.SetActive(false); // 플레이어와 몬스터 충돌 방지
-                    Debug.Log("귀환");
-                    GameManager.Instance.CurruntDay++;
+                    GameManager.Instance.CanDreamComplete = true;
+                    //Debug.Log("귀환");
+                    //GameManager.Instance.CurruntDay++;
                     GameManager.Instance.ItemCount = 0;
                     MainChange();
                 }

@@ -1906,7 +1906,7 @@ MonoBehaviour:
   AudioSource: {fileID: 201043243}
   RemoveTime: 0.5
   RoomContorller: {fileID: 997648587}
-  sceneName: 0
+  sceneName: 4
 --- !u!1 &216502979
 GameObject:
   m_ObjectHideFlags: 0
@@ -2403,14 +2403,6 @@ PrefabInstance:
     - target: {fileID: 8966476009948884105, guid: ee15bba18a722714e84fd7e8aafc55d7, type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8966476009948884106, guid: ee15bba18a722714e84fd7e8aafc55d7, type: 3}
-      propertyPath: CurruntDay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8966476009948884106, guid: ee15bba18a722714e84fd7e8aafc55d7, type: 3}
-      propertyPath: CanDreamComplete
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8966476009948884107, guid: ee15bba18a722714e84fd7e8aafc55d7, type: 3}
       propertyPath: m_RootOrder
@@ -4969,6 +4961,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1544410825388970425, guid: 7bcbd62b8fb53d2419a207f9e269b179, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544410827066300690, guid: 7bcbd62b8fb53d2419a207f9e269b179, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

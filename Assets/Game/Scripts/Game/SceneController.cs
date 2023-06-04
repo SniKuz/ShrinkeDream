@@ -12,7 +12,7 @@ public class SceneController : MonoBehaviour
         Cut,
         MainRoom,
         Dream,
-        Dread2,
+        Dream2,
         EndGame
 
     }
