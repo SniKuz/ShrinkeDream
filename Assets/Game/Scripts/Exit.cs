@@ -28,7 +28,7 @@ public class Exit : MonoBehaviour
             //추격, 아이템 하나만 먹고 탈출
             if (SceneManager.GetActiveScene().name == "Dream2")
             {
-                if (GameManager.Instance.ItemCount > 0)
+                if (GameManager.Instance.ItemCount >= 2)
                 {
                     player.SetActive(false); // 플레이어와 몬스터 충돌 방지
                     Debug.Log("귀환");
@@ -54,7 +54,5 @@ public class Exit : MonoBehaviour
     {
         yield return new WaitForSeconds(mainTime);
         GameManager.Instance.SceneController.LoadScene("MainRoom");
-
-        //itemcount가 일정 개수 이상이면 MainRoom에 텍스트 추가
     }
 }
