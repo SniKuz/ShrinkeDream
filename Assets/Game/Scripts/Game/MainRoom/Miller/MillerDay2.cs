@@ -66,6 +66,7 @@ namespace Assets.Game.Scripts.Game.MainRoom.Miller
                 // 테스트버젼
                 GameManager.Instance.SceneController.PreloadScene("EndGame");
                 //
+                
                 EpiCha.SetActive(true);
                 EpilogueDia.gameObject.SetActive(true);
                 EpilogueDia.Show();
