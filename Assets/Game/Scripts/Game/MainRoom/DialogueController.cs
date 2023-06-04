@@ -28,12 +28,16 @@ public class DialogueController : MonoBehaviour
     public string currentDialogueName;
     public int currentDialogueIndex;
 
+    [HideInInspector] public bool isEndDialogue = false;
+
     private Dictionary<string, DialogueText> _dialogueDic = new();
-    public List<Button> sebuttons = new();
+    [HideInInspector] public List<Button> sebuttons = new();
 
     #region Base
     public void Init()
     {
+        isEndDialogue = false;
+
         foreach (DialogueText diaText in dialogueTexts)
         {
             _dialogueDic[diaText.Name] = diaText;
@@ -54,6 +58,8 @@ public class DialogueController : MonoBehaviour
 
     public void Close()
     {
+        isEndDialogue = true;
+        Debug.Log("asdad" + isEndDialogue);
         RayBlocker.SetActive(false);
         gameObject.SetActive(false);
     }
@@ -113,6 +119,8 @@ public class DialogueController : MonoBehaviour
 
     private void SetDialogue(DialogueText.Dialogue dialogue)
     {
+        BlackMirror(dialogue.isRight);
+
         _dialogueText.text = dialogue.Context;
         _leftNameText.text = dialogue.LeftName;
         if (dialogue.LeftSprite == null)
@@ -132,4 +140,24 @@ public class DialogueController : MonoBehaviour
         }
     }
 
+    private void BlackMirror(bool isRight)
+    {
+        if (isRight)
+        {
+            Color lc = _leftStandImage.color;
+            lc.a = 0.7f;
+            _leftStandImage.color = lc;
+            Color rc = _rightStandImage.color;
+            rc.a = 1.0f;
+            _rightStandImage.color = rc;
+        } else
+        {
+            Color rc = _rightStandImage.color;
+            rc.a = 0.7f;
+            _rightStandImage.color = rc;
+            Color lc = _leftStandImage.color;
+            lc.a = 1.0f;
+            _leftStandImage.color = lc;
+        }
+    }
 }

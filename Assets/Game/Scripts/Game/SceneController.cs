@@ -11,16 +11,20 @@ public class SceneController : MonoBehaviour
         Title,
         Cut,
         MainRoom,
-        LobbyScene
+        Dream,
+        Dread2,
+        EndGame
 
     }
 
-    public SceneName sceneName;
+    public static SceneName sceneName;
     [SerializeField]
     private string Path_Scene = "Game/Scenes/";
 
     public int ActiveCount = 1;
     public int previousScene;
+    
+    private AsyncOperation async;
 
     /* Scene Load */
     /// <summary>
@@ -56,5 +60,19 @@ public class SceneController : MonoBehaviour
         SceneManager.SetActiveScene(SceneManager.GetSceneAt(0));
         SceneManager.UnloadSceneAsync(previousScene);
         ActiveCount--;
+    }
+
+
+    public void PreloadScene(string sceneName)
+    {
+        async = SceneManager.LoadSceneAsync(sceneName);
+        async.allowSceneActivation = false;
+    }
+
+    public void PlayPreloadScene()
+    {
+        if (async == null) return;
+
+        async.allowSceneActivation = true;
     }
 }

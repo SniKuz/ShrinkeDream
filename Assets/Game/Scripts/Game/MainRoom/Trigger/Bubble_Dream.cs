@@ -9,11 +9,15 @@ namespace Game.MainRoom.Trigger
     public class Bubble_Dream : BubbleObject
     {
         public RoomContorller RoomContorller;
+        public SceneController.SceneName sceneName;
 
         public override void OnPointerClick(PointerEventData eventData)
         {
             base.OnPointerClick(eventData);
-            RoomContorller.DreamChange();
+            RoomContorller.DreamChange(sceneName.ToString());
+            TriggerBubble.BubbleAction -= SetActive;
+            TriggerBubble.isEndEvent = false;
+            TriggerBubble.boxCollider.enabled = false;
         }
     }
 }

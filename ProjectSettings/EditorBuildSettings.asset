@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scenes/Dream.unity
     guid: aa707c0a0fcb0164cb2262e75cc863e7
+  - enabled: 1
+    path: Assets/Game/Scenes/Dream2.unity
+    guid: 65406af8921927d4e8c7d0e99c44ec19
+  - enabled: 1
+    path: Assets/Game/Scenes/EndGame.unity
+    guid: fcd97fd4f3992d84d9a923d5256b0c53
   m_configObjects: {}

@@ -13,10 +13,12 @@ public class DialogueText
     [System.Serializable]
     public struct Dialogue
     {
+        public bool isRight;
         public string LeftName;
         public Sprite LeftSprite;
         public string RightName;
         public Sprite RightSprite;
+        [TextArea]
         public string Context;
     }
 

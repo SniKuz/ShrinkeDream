@@ -10,10 +10,18 @@ namespace Game.MainRoom.Trigger
     {
         public DialogueController DialogueController;
 
+        private void OnEnable()
+        {
+            DialogueController.Close();
+        }
+
         public override void OnPointerClick(PointerEventData eventData)
         {
-            DialogueController.Show();
             base.OnPointerClick(eventData);
+            DialogueController.Show();
+            TriggerBubble.BubbleAction -= SetActive;
+            TriggerBubble.isEndEvent = true;
+            TriggerBubble.boxCollider.enabled = false;
         }
     }
 }

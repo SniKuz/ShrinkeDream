@@ -1,25 +1,36 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Game.Trigger
 {
     public class TriggerBubble : MonoBehaviour
     {
-        public GameObject Bubble;
+        public BubbleObject Bubble;
+        public BoxCollider2D boxCollider;
+
+        public Action<bool> BubbleAction;
+
+        [HideInInspector]public bool isEndEvent;
+
+        public void SetActive(bool isAcitve)
+        {
+            gameObject.SetActive(isAcitve);
+        }
 
         private void Start()
         {
             Init();
-        }
-
-        private void OnDisable()
-        {
-            Init();
+            boxCollider = GetComponent<BoxCollider2D>();
         }
 
         private void Init()
         {
+            isEndEvent = false;
+            BubbleAction += Bubble.SetActive;
+            Bubble.TriggerBubble = this;
             Bubble.SetActive(false);
         }
 
@@ -27,7 +38,7 @@ namespace Game.Trigger
         {
             if (collision.CompareTag("Player"))
             {
-                Bubble.gameObject.SetActive(true);
+                BubbleAction?.Invoke(true);
             }
         }
 
@@ -35,7 +46,7 @@ namespace Game.Trigger
         {
             if (collision.CompareTag("Player"))
             {
-                Bubble.gameObject.SetActive(false);
+                BubbleAction?.Invoke(false);
             }
         }
     }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8966476009948884106}
   - component: {fileID: 1118443425}
   - component: {fileID: 1068397953601986711}
+  - component: {fileID: 324935098905928001}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -46,10 +47,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8617507a9a6ceed469e3af1256331fef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneController: {fileID: 0}
+  SceneController: {fileID: 324935098905928001}
   Controllers: []
   BGM_Audio: {fileID: 1068397953601986711}
+  CurrentCharacter: Miller
   CurruntDay: 0
+  ItemCount: 0
 --- !u!81 &1118443425
 AudioListener:
   m_ObjectHideFlags: 0
@@ -154,3 +157,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &324935098905928001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8966476009948884105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761c62218ebc0464fbcd5a151933820c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 0
+  Path_Scene: Game/Scenes/
+  ActiveCount: 1
+  previousScene: 0

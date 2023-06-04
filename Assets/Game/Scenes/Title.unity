@@ -1269,7 +1269,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1522598912}
   - component: {fileID: 1522598911}
-  - component: {fileID: 1522598910}
   - component: {fileID: 1522598913}
   m_Layer: 0
   m_Name: GameController
@@ -1278,22 +1277,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1522598910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522598909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 761c62218ebc0464fbcd5a151933820c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: 2
-  Path_Scene: Game/Scenes/
-  ActiveCount: 1
-  previousScene: 0
 --- !u!114 &1522598911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1306,7 +1289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2238fcd27311b7c49b32b9833e47cd71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneController: {fileID: 1522598910}
+  sceneName: 2
   zoomEffect: {fileID: 1875590187}
   clips:
   - {fileID: 8300000, guid: 956ad2f73332544fd87365087825cc4f, type: 3}

@@ -29,7 +29,6 @@ namespace Game
         #endregion
 
         public SceneController SceneController;
-        public GameObject[] Controllers;
         public AudioSource BGM_Audio;
         [Header("Charater")]
         public string CurrentCharacter = "Miller";
@@ -38,20 +37,8 @@ namespace Game
 
         [SerializeField]
         public int ItemCount; //일정 itemcount가 되면 꿈신을 변경
+        public bool CanDreamComplete = false;
 
-
-
-        private void OnEnable()
-        {
-            Controllers = GameObject.FindGameObjectsWithTag("Controller");
-            foreach (GameObject ct in Controllers)
-            {
-                ct.TryGetComponent(out SceneController);
-
-                if (SceneController != null)
-                    break;
-            }
-        }
 
         public void EXITGAME()
         {
