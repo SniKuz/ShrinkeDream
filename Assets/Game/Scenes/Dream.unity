@@ -5876,6 +5876,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 1179879064488721134, guid: 27835a7c71be15640864b0db1e49d517, type: 3}
+      propertyPath: m_TagString
+      value: Trigger
+      objectReference: {fileID: 0}
     - target: {fileID: 1179879064488721135, guid: 27835a7c71be15640864b0db1e49d517, type: 3}
       propertyPath: m_Size.x
       value: 5.3855042

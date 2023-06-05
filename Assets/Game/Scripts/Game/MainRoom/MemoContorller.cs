@@ -17,6 +17,7 @@ namespace Game.MainRoom
         [SerializeField]
         Button _showButton;
 
+        public GameObject[] DayMemoImage;
         public TypeAnimation[] DayMemoText;
 
         [Header("Setting Values")]
@@ -41,6 +42,10 @@ namespace Game.MainRoom
             {
                 tObj.transform.gameObject.SetActive(false);
                 tObj.TypeDelay = TypeDelay;
+            }
+            foreach (GameObject obj in DayMemoImage)
+            {
+                obj.SetActive(false);
             }
             RayBlocker.SetActive(false);
         }
@@ -104,8 +109,8 @@ namespace Game.MainRoom
         #region Type
         public void NextDay()
         {
-            if (curruntDay >= DayMemoText.Length) return;
-
+            if (curruntDay > DayMemoText.Length) return;
+            DayMemoImage[curruntDay].SetActive(true);
             DayMemoText[curruntDay].transform.gameObject.SetActive(true);
             DayMemoText[curruntDay].Type();
             curruntDay++;

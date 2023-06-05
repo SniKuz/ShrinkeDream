@@ -3929,7 +3929,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 24867895}
-  - {fileID: 1681037325}
+  - {fileID: 1533445731}
   - {fileID: 1570874795}
   m_Father: {fileID: 1878979188}
   m_RootOrder: 2
@@ -4745,7 +4745,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -299131073, guid: 48b47fb665bf1d24ab3c73aa65c5cd61, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8154,24 +8154,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<size=56>Day1 CunSulting</size>
-
-
-    The stan vel eum iure reprehenderit
-    qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
-    dolorem eum fugiat quo voluptas nulla pariatur?"
-
-
-    1914 translat undertakes
-    laborious physical exercise, except to obtain some advantage from it? But who
-    has any right to find fault with a man who chooses to enjoy a pleasure that has
-    no annoying consequences, or one who avoids a pain that produces no resultant
-    pleasure?"
-
-'
+  m_text: "<size=56>Day1 Miller\uC758 \uBC29\uBB38</size>\n\n1\uCE35 \uC18C\uC544\uACFC\uC5D0
+    \uADFC\uBB34\uD558\uB294 Miller \uC528\uAC00 \uBD88\uBA74\uC99D\uB54C\uBB38\uC5D0
+    \uBC29\uBB38\uD558\uC600\uB2E4.\n\uADF8\uB140\uC758 \uBD88\uBA74\uC99D\uC740
+    1\uB2EC \uC804\uBD80\uD130 \uC2DC\uC791\uB418\uC5C8\uB2E4\uACE0 \uD55C\uB2E4.\n\n\uAFC8
+    \uC18D\uC5D0\uC11C 1\uB2EC \uC804\uC758 \uC0AC\uAC74\uC744 \uC870\uC0AC\uD558\uB294
+    \uACFC\uC815\uC5D0\uC11C \uADF8 \uB0A0\uC758 \uC544\uC774\uB4E4\uC758 \uC0AC\uB9DD\uC9C4\uB2E8\uC11C\uB97C\n\uBC1C\uACAC\uD560
+    \uC218 \uC788\uC5C8\uB2E4.\n\uC9C4\uB2E8\uC11C\uC758 \uB0B4\uC6A9\uC744 \uD1A0\uB300\uB85C
+    Miller \uC528\uC5D0\uAC8C \uBB3C\uC5B4\uBCF8 \uACB0\uACFC \uC0AC\uB9DD\uD55C
+    \uC544\uC774 \uC911 1\uBA85\uC774 Miller \uC528\uC758 \uC798\uBABB\uC774\uB77C\uB294
+    \uC8C4\uCC45\uAC10\uC774 \uBD88\uBA74\uC99D\uC758 \uC6D0\uC778\uC73C\uB85C \uBCF4\uC778\uB2E4.\n\n\uB2E4\uC74C
+    \uC0C1\uB2F4\uC5D0\uC11C Miller\uC528\uC758 \uC8C4\uCC45\uAC10\uC744 \uB35C\uC5B4\uC904
+    \uBC29\uBC95\uC744 \uC0DD\uAC01\uD574 \uBD10\uC57C\uACA0\uB2E4.\n(\uD760... \uC0AC\uD0D5\uC744
+    \uBC1B\uC740 \uC2DC\uAC04\uACFC \uC544\uC774\uC758 \uC0AC\uB9DD \uC2DC\uAC04\uC774
+    \uC77C\uCE58\uD558\uC9C0 \uC54A\uB294\uAC70 \uAC19\uC740\uB370)"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 733ccb7fcd9540a4db58423819237171, type: 2}
+  m_sharedMaterial: {fileID: 5526025014958985562, guid: 733ccb7fcd9540a4db58423819237171, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10734,6 +10733,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353935240}
   m_CullTransparentMesh: 1
+--- !u!1 &1356263923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1356263924}
+  - component: {fileID: 1356263926}
+  - component: {fileID: 1356263925}
+  m_Layer: 5
+  m_Name: Chap2_Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1356263924
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356263923}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1533445731}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1356263925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356263923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1e53d5ceddd96cc44ac0552c6e6c2585, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1356263926
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356263923}
+  m_CullTransparentMesh: 1
 --- !u!1 &1356323158
 GameObject:
   m_ObjectHideFlags: 0
@@ -12590,6 +12665,44 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1533445730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1533445731}
+  m_Layer: 5
+  m_Name: CgaotresImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1533445731
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533445730}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1681037325}
+  - {fileID: 1356263924}
+  m_Father: {fileID: 495625805}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -443.7669, y: -120}
+  m_SizeDelta: {x: 830, y: 500}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1544346417
 GameObject:
   m_ObjectHideFlags: 0
@@ -12648,7 +12761,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Read
+  m_text: Blue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12736,7 +12849,7 @@ GameObject:
   - component: {fileID: 1570874795}
   - component: {fileID: 1570874796}
   m_Layer: 0
-  m_Name: Chapters
+  m_Name: ChaptersText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14139,7 +14252,7 @@ GameObject:
   - component: {fileID: 1681037327}
   - component: {fileID: 1681037326}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Chap1_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14152,18 +14265,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1681037324}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 495625805}
-  m_RootOrder: 1
+  m_Father: {fileID: 1533445731}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -450.208, y: -132.76843}
-  m_SizeDelta: {x: 818.4175, y: 458.2806}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1681037326
 MonoBehaviour:
@@ -14178,14 +14291,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.23516445, g: 0.23584908, b: 0.18356179, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2cdee3ed57e0b13409a021f39e5824c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15596,7 +15709,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: kakaru
+  m_text: Candy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16476,6 +16589,9 @@ MonoBehaviour:
   _memoObject: {fileID: 1878979187}
   RayBlocker: {fileID: 498252981}
   _showButton: {fileID: 1817152957}
+  DayMemoImage:
+  - {fileID: 1681037324}
+  - {fileID: 1356263923}
   DayMemoText:
   - {fileID: 1044860416}
   - {fileID: 1878139150}
